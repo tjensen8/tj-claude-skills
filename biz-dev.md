@@ -269,9 +269,29 @@ Milestone 3 (M3): [First growth signal — date + what]
 When this skill is invoked:
 1. Ask which phase the user wants to work on, OR begin at Phase 1 if this is a
    first session.
-2. If context exists (from prior answers, memory, or the current codebase), read
-   it in and acknowledge what's already known before asking new questions.
+2. **Read `biz-dev/business-review.md` in the current project repo first** (if it
+   exists). This is the source of truth for where the analysis stands. Acknowledge
+   what's already known and what phase is in progress before asking anything new.
 3. State the riskiest open assumption before beginning any phase.
+
+### Persisting analysis
+
+After every session — or whenever a phase output is confirmed, a new fact is
+validated, or a belief is added or resolved:
+
+1. **Update `biz-dev/business-review.md`** in the current project repo with:
+   - Progression tracker (mark phases complete/in-progress)
+   - Any new **(F) Fact** entries with date and source
+   - Any new or resolved **(B) Belief** entries
+   - The completed phase output (problem statement, customer profile, etc.)
+   - Updated riskiest open assumption
+2. **Commit the file** with a message in the format:
+   `[biz-dev] Phase N complete — <one-line summary of what was learned>`
+   or for belief updates:
+   `[biz-dev] Validate/invalidate assumption — <what changed>`
+3. Do not wait for the user to ask to save — persist after every meaningful update.
+
+This ensures business decisions are version-controlled alongside the code.
 
 ### During a session
 
