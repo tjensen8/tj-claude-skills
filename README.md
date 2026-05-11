@@ -10,5 +10,5 @@ Skills are custom slash commands (`/skill-name`) that extend Claude Code with re
 
 | Skill | Description |
 |-------|-------------|
-| *(more to come)* | |
+| [asana-pm-workflow](asana-pm-workflow.md) | Enforces Asana-as-source-of-truth PM workflow: session start/end checklists, advisory prioritization, task lifecycle, and board hygiene |
 
